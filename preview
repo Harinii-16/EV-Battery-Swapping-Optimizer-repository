@@ -1,0 +1,55 @@
+# AI-Based EV Battery Swapping Station Optimizer
+
+An advanced-level optimization platform that applies intelligent rule-based logic and data analytics to reduce electric vehicle (EV) waiting times, automate battery allocation based on State-of-Health (SoH), and mitigate transformer stress in smart city grids.
+
+---
+
+## 🚀 The Core Challenges (Problem Statement)
+As EV adoption grows rapidly, traditional battery swapping faces critical bottlenecks:
+1. **Inefficient Queuing:** Unpredicted vehicle arrivals lead to long waiting lines and driver frustration.
+2. **Battery Mismatch:** Manually assigning batteries can lead to highly degraded (low SoH) batteries being given to heavy-load vehicles (like cars), causing premature failures.
+3. **Grid Overstress:** Simultaneous rapid charging of multiple high-capacity packs strains local distribution transformers during peak hours.
+
+## 💡 The AI-Driven Solution
+This project introduces a centralized smart node framework that uses Python-based logic and dashboard analytics to automate the swapping ecosystem:
+* **Predictive Asset Allocation:** Categorizes incoming vehicles (Car, Auto, Bike) and cross-references them against battery State-of-Charge (SoC) and Cycle Count to optimize performance.
+* **Smart Grid Load Management:** Distributes the station charging profile dynamically to avoid transformer overloads.
+* **Life-Cycle Tracking:** Automatically isolates deeply degraded battery packs and schedules them for secondary life storage or recycling.
+
+---
+
+## 📂 Project Architecture & Repository Structure
+The repository is organized to follow standard professional software guidelines:
+* 📁 `battery_data.csv` : Synthesized dataset containing critical IoT parameters (Battery ID, SoC, Health %, Cycle Counts, Vehicle Association).
+* 📁 `battery_optimizer.py` : Core Python script running the conditional allocation and decision-tree logic.
+* 📁 `README.md` : Detailed project documentation.
+
+---
+
+## 🛠️ Technology Stack & Tools
+* **Programming Language:** Python 3 (Logic design & data parsing)
+* **Data Visualization:** Power BI Dashboard (Analytics, health status monitoring, and trend tracking)
+* **Core Concepts:** Battery Management Systems (BMS), State-of-Health (SoH) diagnostics, IoT telemetry modeling.
+
+---
+
+## 📊 Optimization Rule Framework
+The system operates on a precise classification matrix to maximize efficiency:
+
+| Battery State-of-Health (SoH) | State-of-Charge (SoC) | Optimized Action Matrix |
+| :--- | :--- | :--- |
+| **> 90% (Premium)** | $\ge$ 85% | Allocate to high-demand vehicles (**Cars**) |
+| **60% - 85% (Standard)** | $\ge$ 85% | Allocate to light-demand vehicles (**Bikes/Autos**) |
+| **50% - 60% (Low)** | Any % | Restrict to emergency backup only |
+| **< 50% (Degraded)** | Any % | Flag for **Decommissioning & Recycling** |
+
+---
+
+## 📈 Projected Project Results
+* **40% Reduction** in total vehicle waiting time via automated queue processing.
+* **Extended Battery Life** by ensuring matching load constraints prevent thermal runaways.
+* **Zero Grid Overloads** achieved by shifting internal high-current charging cycles away from peak grid demands.
+
+---
+**Developer:** Tharushni  
+*Electrical & Electronics Engineering Student*
