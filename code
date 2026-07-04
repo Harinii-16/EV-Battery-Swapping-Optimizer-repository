@@ -1,0 +1,32 @@
+# AI-Based EV Battery Swapping Station Optimizer
+# Developer: Tharushni
+
+def allocate_battery(vehicle_type, health, soc):
+    """
+    Optimization Logic:
+    Allocates high-health batteries to heavy vehicles (Cars), 
+    medium-health to lighter transport, and flags degraded batteries.
+    """
+    if health < 50:
+        return "Send to Recycle"
+    elif soc < 20:
+        return "Charging Required"
+    
+    if vehicle_type == "Car" and health >= 90:
+        return "Allocated: Premium Battery A"
+    elif vehicle_type in ["Auto", "Bike"] and 60 <= health < 90:
+        return "Allocated: Standard Battery B"
+    else:
+        return "Allocated: General Backup Battery"
+
+# Test Case (Dry Run)
+vehicles = [
+    {"type": "Car", "health": 94, "soc": 95},
+    {"type": "Bike", "health": 65, "soc": 91},
+    {"type": "Auto", "health": 40, "soc": 45}
+]
+
+print("--- EV Swapping Optimization Test Results ---")
+for idx, v in enumerate(vehicles, 1):
+    decision = allocate_battery(v["type"], v["health"], v["soc"])
+    print(f"Vehicle {idx} [{v['type']}]: {decision}")
